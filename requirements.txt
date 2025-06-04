@@ -1,0 +1,9 @@
+# کتابخانه‌های مورد نیاز پروژه برای نصب در کانتینر
+flask  # فریم‌ورک اصلی وب
+redis  # اتصال به Redis برای کش
+psycopg2-binary  # اتصال به پایگاه داده PostgreSQL
+python-dotenv  # خواندن متغیرهای محیطی از فایل .env
+flask-cors  # فعال‌سازی CORS برای ارتباط بین frontend و backend
+flask-jwt-extended  # JWT برای احراز هویت کاربران
+flask-limiter  # محدود کردن نرخ درخواست‌ها
+prometheus_flask_exporter  # اکسپورت داده‌های متریک برای Prometheus

@@ -1,0 +1,45 @@
+
+version: '3.9'  # ورژن مشخص‌کننده ساختار فایل docker-compose
+
+services:
+  app:
+    build: .  # ساخت image از فایل Dockerfile در همین مسیر
+    container_name: startup-namer  # نام کانتینر بک‌اند
+    ports:
+      - "5000:5000"  # اتصال پورت محلی 5000 به داخل کانتینر
+    depends_on:
+      - redis
+      - postgres  # اپ وابسته به Redis و PostgreSQL است
+    env_file:
+      - .env  # استفاده از متغیرهای محیطی از فایل .env
+
+  redis:
+    image: redis:7  # استفاده از نسخه 7 رِدیس
+    container_name: redis
+    ports:
+      - "6379:6379"  # پورت پیش‌فرض Redis
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_DB: namerdb  # نام پایگاه‌داده
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # نگهداری داده‌ها به صورت دائمی
+
+  frontend:
+    image: nginx:alpine  # اجرای رابط کاربری با Nginx سبک
+    container_name: frontend
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro  # قرار دادن فایل‌های HTML در مسیر Nginx
+    ports:
+      - "8088:80"
+    depends_on:
+      - app  # بعد از اجرای اپ، رابط کاربری اجرا شود
+
+volumes:
+  pgdata:  # تعریف حجم داده برای پایگاه داده

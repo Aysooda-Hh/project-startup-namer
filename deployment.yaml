@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: startup-namer  # نام دیپلویمنت
+spec:
+  replicas: 2  # اجرای 2 پاد برای Load Balancing
+  selector:
+    matchLabels:
+      app: namer
+  template:
+    metadata:
+      labels:
+        app: namer
+    spec:
+      containers:
+        - name: startup-namer
+          image: aysooda/startup-namer:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+          env:
+            - name: REDIS_HOST
+              value: "redis"
+            - name: REDIS_PORT
+              value: "6379"
+            - name: PG_DB
+              value: "namerdb"
+            - name: PG_USER
+              value: "postgres"
+            - name: PG_PASS
+              value: "password"
+            - name: PG_HOST
+              value: "postgres"
+            - name: PG_PORT
+              value: "5432"
+          livenessProbe:
+            httpGet:
+              path: /metrics  # بررسی زنده بودن سرویس از مسیر مانیتورینگ
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /metrics  # بررسی آمادگی سرویس
+              port: 5000
+            initialDelaySeconds: 3
+            periodSeconds: 5

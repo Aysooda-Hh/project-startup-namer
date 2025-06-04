@@ -1,0 +1,110 @@
+<!-- مستندات HTML برای رابط کاربری پیشنهاد نام استارتاپ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>پیشنهاد نام برای استارتاپ</title>
+  <style>
+    /* استایل‌دهی به بدنه، جعبه، دکمه و لیست */
+    body {
+      background: linear-gradient(to right, #74ebd5, #f6cef7); /* زمینه آبی به صورتی */
+      text-align: center;
+    }
+    /* عنوان صفحه */
+    h1 {
+      color: #333;
+      padding-top: 40px;
+    }
+    /* جعبه سفید حاوی ورودی و دکمه */
+    .box {
+      background: white;
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    /* فیلد ورودی */
+    input {
+      padding: 10px;
+      width: 80%;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    /* دکمه ارسال */
+    button {
+      padding: 12px 25px;
+      background-color: #ff66cc;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff3399;
+    }
+    /* لیست نتایج */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 8px 0;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>سامانه پیشنهاد نام استارتاپ</h1>
+  <div class="box">
+    <input id="keyword" type="text" placeholder="مثلاً: food" />
+    <br />
+    <button onclick="generateNames()">ایجاد</button>
+    <ul id="results"></ul>
+  </div>
+
+  <script>
+    // تابع ارسال درخواست به API برای دریافت نام‌های پیشنهادی
+    async function generateNames() {
+      const keyword = document.getElementById("keyword").value.trim();
+      const ul = document.getElementById("results");
+      ul.innerHTML = "";
+
+      if (!keyword) {
+        alert("لطفاً یک کلمه وارد کنید!");
+        return;
+      }
+
+      try {
+        // ارسال درخواست POST به API لوکال
+        const res = await fetch("http://localhost:5000/generate-names", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ keyword: keyword, count: 5 })
+        });
+
+        const data = await res.json();
+
+        // نمایش نتایج در لیست
+        if (data.names) {
+          data.names.forEach(name => {
+            const li = document.createElement("li");
+            li.textContent = name;
+            ul.appendChild(li);
+          });
+        } else {
+          alert("پاسخی دریافت نشد.");
+        }
+
+      } catch (err) {
+        console.error(err);
+        alert("خطا در اتصال به سرور.");
+      }
+    }
+  </script>
+</body>
+</html>
