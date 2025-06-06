@@ -81,7 +81,7 @@
 
       try {
         // ارسال درخواست POST به API لوکال
-        const res = await fetch("http://localhost:5000/generate-names", {
+        const res = await fetch("/api/generate-names", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ keyword: keyword, count: 5 })

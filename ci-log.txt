@@ -1,0 +1,275 @@
+build-deploy	Set up job	﻿2025-06-04T19:21:56.1779447Z Current runner version: '2.324.0'
+build-deploy	Set up job	2025-06-04T19:21:56.1805070Z ##[group]Runner Image Provisioner
+build-deploy	Set up job	2025-06-04T19:21:56.1805965Z Hosted Compute Agent
+build-deploy	Set up job	2025-06-04T19:21:56.1806571Z Version: 20250508.323
+build-deploy	Set up job	2025-06-04T19:21:56.1807214Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+build-deploy	Set up job	2025-06-04T19:21:56.1807892Z Build Date: 2025-05-08T19:40:08Z
+build-deploy	Set up job	2025-06-04T19:21:56.1808553Z ##[endgroup]
+build-deploy	Set up job	2025-06-04T19:21:56.1809334Z ##[group]Operating System
+build-deploy	Set up job	2025-06-04T19:21:56.1809904Z Ubuntu
+build-deploy	Set up job	2025-06-04T19:21:56.1810452Z 24.04.2
+build-deploy	Set up job	2025-06-04T19:21:56.1810927Z LTS
+build-deploy	Set up job	2025-06-04T19:21:56.1811417Z ##[endgroup]
+build-deploy	Set up job	2025-06-04T19:21:56.1811893Z ##[group]Runner Image
+build-deploy	Set up job	2025-06-04T19:21:56.1812558Z Image: ubuntu-24.04
+build-deploy	Set up job	2025-06-04T19:21:56.1813063Z Version: 20250511.1.0
+build-deploy	Set up job	2025-06-04T19:21:56.1814101Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+build-deploy	Set up job	2025-06-04T19:21:56.1815588Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+build-deploy	Set up job	2025-06-04T19:21:56.1816791Z ##[endgroup]
+build-deploy	Set up job	2025-06-04T19:21:56.1817958Z ##[group]GITHUB_TOKEN Permissions
+build-deploy	Set up job	2025-06-04T19:21:56.1820176Z Contents: read
+build-deploy	Set up job	2025-06-04T19:21:56.1820867Z Metadata: read
+build-deploy	Set up job	2025-06-04T19:21:56.1821404Z Packages: read
+build-deploy	Set up job	2025-06-04T19:21:56.1821996Z ##[endgroup]
+build-deploy	Set up job	2025-06-04T19:21:56.1824383Z Secret source: Actions
+build-deploy	Set up job	2025-06-04T19:21:56.1825360Z Prepare workflow directory
+build-deploy	Set up job	2025-06-04T19:21:56.2155025Z Prepare all required actions
+build-deploy	Set up job	2025-06-04T19:21:56.2192896Z Getting action download info
+build-deploy	Set up job	2025-06-04T19:21:56.7632966Z ##[group]Download immutable action package 'actions/checkout@v3'
+build-deploy	Set up job	2025-06-04T19:21:56.7633993Z Version: 3.6.0
+build-deploy	Set up job	2025-06-04T19:21:56.7635029Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
+build-deploy	Set up job	2025-06-04T19:21:56.7636175Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
+build-deploy	Set up job	2025-06-04T19:21:56.7636883Z ##[endgroup]
+build-deploy	Set up job	2025-06-04T19:21:56.8634266Z ##[group]Download immutable action package 'actions/setup-python@v4'
+build-deploy	Set up job	2025-06-04T19:21:56.8635201Z Version: 4.9.1
+build-deploy	Set up job	2025-06-04T19:21:56.8635995Z Digest: sha256:f03e505388af670b5a108629e0ba26befc08d5c62b41f46146a45fe29ae509a5
+build-deploy	Set up job	2025-06-04T19:21:56.8636859Z Source commit SHA: 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
+build-deploy	Set up job	2025-06-04T19:21:56.8637607Z ##[endgroup]
+build-deploy	Set up job	2025-06-04T19:21:57.1714052Z Download action repository 'azure/setup-kubectl@v3' (SHA:901a10e89ea615cf61f57ac05cecdf23e7de06d8)
+build-deploy	Set up job	2025-06-04T19:21:57.6727114Z Complete job name: build-deploy
+build-deploy	Checkout source code	﻿2025-06-04T19:21:57.7521591Z ##[group]Run actions/checkout@v3
+build-deploy	Checkout source code	2025-06-04T19:21:57.7522959Z with:
+build-deploy	Checkout source code	2025-06-04T19:21:57.7523818Z   repository: Aysooda-Hh/project-startup-namer
+build-deploy	Checkout source code	2025-06-04T19:21:57.7525256Z   token: ***
+build-deploy	Checkout source code	2025-06-04T19:21:57.7525997Z   ssh-strict: true
+build-deploy	Checkout source code	2025-06-04T19:21:57.7526813Z   persist-credentials: true
+build-deploy	Checkout source code	2025-06-04T19:21:57.7527708Z   clean: true
+build-deploy	Checkout source code	2025-06-04T19:21:57.7528498Z   sparse-checkout-cone-mode: true
+build-deploy	Checkout source code	2025-06-04T19:21:57.7529624Z   fetch-depth: 1
+build-deploy	Checkout source code	2025-06-04T19:21:57.7530383Z   fetch-tags: false
+build-deploy	Checkout source code	2025-06-04T19:21:57.7531150Z   lfs: false
+build-deploy	Checkout source code	2025-06-04T19:21:57.7531864Z   submodules: false
+build-deploy	Checkout source code	2025-06-04T19:21:57.7532694Z   set-safe-directory: true
+build-deploy	Checkout source code	2025-06-04T19:21:57.7533796Z ##[endgroup]
+build-deploy	Checkout source code	2025-06-04T19:21:57.8420143Z Syncing repository: Aysooda-Hh/project-startup-namer
+build-deploy	Checkout source code	2025-06-04T19:21:57.8423260Z ##[group]Getting Git version info
+build-deploy	Checkout source code	2025-06-04T19:21:57.8424915Z Working directory is '/home/runner/work/project-startup-namer/project-startup-namer'
+build-deploy	Checkout source code	2025-06-04T19:21:57.8427192Z [command]/usr/bin/git version
+build-deploy	Checkout source code	2025-06-04T19:21:57.8483445Z git version 2.49.0
+build-deploy	Checkout source code	2025-06-04T19:21:57.8511768Z ##[endgroup]
+build-deploy	Checkout source code	2025-06-04T19:21:57.8526664Z Temporarily overriding HOME='/home/runner/work/_temp/0901083e-c49d-4d7b-b84e-82b3bcaf1063' before making global git config changes
+build-deploy	Checkout source code	2025-06-04T19:21:57.8530051Z Adding repository directory to the temporary git global config as a safe directory
+build-deploy	Checkout source code	2025-06-04T19:21:57.8532611Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-startup-namer/project-startup-namer
+build-deploy	Checkout source code	2025-06-04T19:21:57.8569011Z Deleting the contents of '/home/runner/work/project-startup-namer/project-startup-namer'
+build-deploy	Checkout source code	2025-06-04T19:21:57.8572856Z ##[group]Initializing the repository
+build-deploy	Checkout source code	2025-06-04T19:21:57.8576282Z [command]/usr/bin/git init /home/runner/work/project-startup-namer/project-startup-namer
+build-deploy	Checkout source code	2025-06-04T19:21:57.8650437Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-deploy	Checkout source code	2025-06-04T19:21:57.8652667Z hint: is subject to change. To configure the initial branch name to use in all
+build-deploy	Checkout source code	2025-06-04T19:21:57.8655525Z hint: of your new repositories, which will suppress this warning, call:
+build-deploy	Checkout source code	2025-06-04T19:21:57.8657856Z hint:
+build-deploy	Checkout source code	2025-06-04T19:21:57.8659379Z hint: 	git config --global init.defaultBranch <name>
+build-deploy	Checkout source code	2025-06-04T19:21:57.8660561Z hint:
+build-deploy	Checkout source code	2025-06-04T19:21:57.8661607Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-deploy	Checkout source code	2025-06-04T19:21:57.8663414Z hint: 'development'. The just-created branch can be renamed via this command:
+build-deploy	Checkout source code	2025-06-04T19:21:57.8665705Z hint:
+build-deploy	Checkout source code	2025-06-04T19:21:57.8666857Z hint: 	git branch -m <name>
+build-deploy	Checkout source code	2025-06-04T19:21:57.8669585Z Initialized empty Git repository in /home/runner/work/project-startup-namer/project-startup-namer/.git/
+build-deploy	Checkout source code	2025-06-04T19:21:57.8673356Z [command]/usr/bin/git remote add origin https://github.com/Aysooda-Hh/project-startup-namer
+build-deploy	Checkout source code	2025-06-04T19:21:57.8705800Z ##[endgroup]
+build-deploy	Checkout source code	2025-06-04T19:21:57.8707809Z ##[group]Disabling automatic garbage collection
+build-deploy	Checkout source code	2025-06-04T19:21:57.8709245Z [command]/usr/bin/git config --local gc.auto 0
+build-deploy	Checkout source code	2025-06-04T19:21:57.8736997Z ##[endgroup]
+build-deploy	Checkout source code	2025-06-04T19:21:57.8738481Z ##[group]Setting up auth
+build-deploy	Checkout source code	2025-06-04T19:21:57.8741534Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-deploy	Checkout source code	2025-06-04T19:21:57.8768380Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-deploy	Checkout source code	2025-06-04T19:21:57.9114835Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-deploy	Checkout source code	2025-06-04T19:21:57.9143393Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-deploy	Checkout source code	2025-06-04T19:21:57.9364424Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-deploy	Checkout source code	2025-06-04T19:21:57.9397244Z ##[endgroup]
+build-deploy	Checkout source code	2025-06-04T19:21:57.9398694Z ##[group]Fetching the repository
+build-deploy	Checkout source code	2025-06-04T19:21:57.9406359Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +165cbec0c51ad4949b6b7f7a4803c0f68747c4c2:refs/remotes/origin/main
+build-deploy	Checkout source code	2025-06-04T19:21:58.5389272Z remote: Enumerating objects: 17, done.        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5390501Z remote: Counting objects:   5% (1/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5390909Z remote: Counting objects:  11% (2/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5391281Z remote: Counting objects:  17% (3/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5391670Z remote: Counting objects:  23% (4/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5392084Z remote: Counting objects:  29% (5/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5392452Z remote: Counting objects:  35% (6/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5392813Z remote: Counting objects:  41% (7/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5393176Z remote: Counting objects:  47% (8/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5393539Z remote: Counting objects:  52% (9/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5393920Z remote: Counting objects:  58% (10/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5394312Z remote: Counting objects:  64% (11/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5394677Z remote: Counting objects:  70% (12/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5395057Z remote: Counting objects:  76% (13/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5395425Z remote: Counting objects:  82% (14/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5395793Z remote: Counting objects:  88% (15/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5396157Z remote: Counting objects:  94% (16/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5396536Z remote: Counting objects: 100% (17/17)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5396933Z remote: Counting objects: 100% (17/17), done.        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5397647Z remote: Compressing objects:   8% (1/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5398042Z remote: Compressing objects:  16% (2/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5398425Z remote: Compressing objects:  25% (3/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5399049Z remote: Compressing objects:  33% (4/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5399460Z remote: Compressing objects:  41% (5/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5399855Z remote: Compressing objects:  50% (6/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5400264Z remote: Compressing objects:  58% (7/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5400625Z remote: Compressing objects:  66% (8/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5400979Z remote: Compressing objects:  75% (9/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5401329Z remote: Compressing objects:  83% (10/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5401761Z remote: Compressing objects:  91% (11/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5402128Z remote: Compressing objects: 100% (12/12)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5402511Z remote: Compressing objects: 100% (12/12), done.        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5402996Z remote: Total 17 (delta 2), reused 17 (delta 2), pack-reused 0 (from 0)        
+build-deploy	Checkout source code	2025-06-04T19:21:58.5607330Z From https://github.com/Aysooda-Hh/project-startup-namer
+build-deploy	Checkout source code	2025-06-04T19:21:58.5608150Z  * [new ref]         165cbec0c51ad4949b6b7f7a4803c0f68747c4c2 -> origin/main
+build-deploy	Checkout source code	2025-06-04T19:21:58.5636169Z ##[endgroup]
+build-deploy	Checkout source code	2025-06-04T19:21:58.5636863Z ##[group]Determining the checkout info
+build-deploy	Checkout source code	2025-06-04T19:21:58.5638710Z ##[endgroup]
+build-deploy	Checkout source code	2025-06-04T19:21:58.5639560Z ##[group]Checking out the ref
+build-deploy	Checkout source code	2025-06-04T19:21:58.5642918Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build-deploy	Checkout source code	2025-06-04T19:21:58.5693734Z Switched to a new branch 'main'
+build-deploy	Checkout source code	2025-06-04T19:21:58.5696142Z branch 'main' set up to track 'origin/main'.
+build-deploy	Checkout source code	2025-06-04T19:21:58.5702474Z ##[endgroup]
+build-deploy	Checkout source code	2025-06-04T19:21:58.5734392Z [command]/usr/bin/git log -1 --format='%H'
+build-deploy	Checkout source code	2025-06-04T19:21:58.5755308Z '165cbec0c51ad4949b6b7f7a4803c0f68747c4c2'
+build-deploy	Set up Python	﻿2025-06-04T19:21:58.5969559Z ##[group]Run actions/setup-python@v4
+build-deploy	Set up Python	2025-06-04T19:21:58.5970009Z with:
+build-deploy	Set up Python	2025-06-04T19:21:58.5970256Z   python-version: 3.9
+build-deploy	Set up Python	2025-06-04T19:21:58.5970540Z   check-latest: false
+build-deploy	Set up Python	2025-06-04T19:21:58.5970950Z   token: ***
+build-deploy	Set up Python	2025-06-04T19:21:58.5971209Z   update-environment: true
+build-deploy	Set up Python	2025-06-04T19:21:58.5971510Z   allow-prereleases: false
+build-deploy	Set up Python	2025-06-04T19:21:58.5971788Z ##[endgroup]
+build-deploy	Set up Python	2025-06-04T19:21:58.7700419Z ##[group]Installed versions
+build-deploy	Set up Python	2025-06-04T19:21:58.7814267Z Successfully set up CPython (3.9.22)
+build-deploy	Set up Python	2025-06-04T19:21:58.7815115Z ##[endgroup]
+build-deploy	Install dependencies	﻿2025-06-04T19:21:58.7929952Z ##[group]Run pip install -r requirements.txt
+build-deploy	Install dependencies	2025-06-04T19:21:58.7930486Z [36;1mpip install -r requirements.txt[0m
+build-deploy	Install dependencies	2025-06-04T19:21:58.8200778Z shell: /usr/bin/bash -e {0}
+build-deploy	Install dependencies	2025-06-04T19:21:58.8201196Z env:
+build-deploy	Install dependencies	2025-06-04T19:21:58.8201548Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.22/x64
+build-deploy	Install dependencies	2025-06-04T19:21:58.8202105Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.22/x64/lib/pkgconfig
+build-deploy	Install dependencies	2025-06-04T19:21:58.8202651Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.22/x64
+build-deploy	Install dependencies	2025-06-04T19:21:58.8203162Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.22/x64
+build-deploy	Install dependencies	2025-06-04T19:21:58.8203642Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.22/x64
+build-deploy	Install dependencies	2025-06-04T19:21:58.8204124Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.22/x64/lib
+build-deploy	Install dependencies	2025-06-04T19:21:58.8204517Z ##[endgroup]
+build-deploy	Install dependencies	2025-06-04T19:22:01.1600302Z Collecting flask (from -r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:01.1722836Z   Downloading flask-3.1.1-py3-none-any.whl.metadata (3.0 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.2130063Z Collecting redis (from -r requirements.txt (line 3))
+build-deploy	Install dependencies	2025-06-04T19:22:01.2170893Z   Downloading redis-6.2.0-py3-none-any.whl.metadata (10 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.3175682Z Collecting psycopg2-binary (from -r requirements.txt (line 4))
+build-deploy	Install dependencies	2025-06-04T19:22:01.3218613Z   Downloading psycopg2_binary-2.9.10-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.3480022Z Collecting python-dotenv (from -r requirements.txt (line 5))
+build-deploy	Install dependencies	2025-06-04T19:22:01.3524418Z   Downloading python_dotenv-1.1.0-py3-none-any.whl.metadata (24 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.3776958Z Collecting flask-cors (from -r requirements.txt (line 6))
+build-deploy	Install dependencies	2025-06-04T19:22:01.3815378Z   Downloading flask_cors-6.0.0-py3-none-any.whl.metadata (961 bytes)
+build-deploy	Install dependencies	2025-06-04T19:22:01.4053509Z Collecting flask-jwt-extended (from -r requirements.txt (line 7))
+build-deploy	Install dependencies	2025-06-04T19:22:01.4092133Z   Downloading Flask_JWT_Extended-4.7.1-py2.py3-none-any.whl.metadata (3.8 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.4399222Z Collecting flask-limiter (from -r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:01.4466098Z   Downloading flask_limiter-3.11.0-py3-none-any.whl.metadata (6.3 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.4785213Z Collecting prometheus_flask_exporter (from -r requirements.txt (line 9))
+build-deploy	Install dependencies	2025-06-04T19:22:01.4851390Z   Downloading prometheus_flask_exporter-0.23.2-py3-none-any.whl.metadata (20 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.4998162Z Collecting blinker>=1.9.0 (from flask->-r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:01.5041258Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.5246371Z Collecting click>=8.1.3 (from flask->-r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:01.5290883Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.5820226Z Collecting importlib-metadata>=3.6.0 (from flask->-r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:01.5861711Z   Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.6054443Z Collecting itsdangerous>=2.2.0 (from flask->-r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:01.6092186Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.6275236Z Collecting jinja2>=3.1.2 (from flask->-r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:01.6315369Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.6979795Z Collecting markupsafe>=2.1.1 (from flask->-r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:01.7018201Z   Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.7302663Z Collecting werkzeug>=3.1.0 (from flask->-r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:01.7340435Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.7499865Z Collecting async-timeout>=4.0.3 (from redis->-r requirements.txt (line 3))
+build-deploy	Install dependencies	2025-06-04T19:22:01.7538134Z   Downloading async_timeout-5.0.1-py3-none-any.whl.metadata (5.1 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.8134395Z Collecting PyJWT<3.0,>=2.0 (from flask-jwt-extended->-r requirements.txt (line 7))
+build-deploy	Install dependencies	2025-06-04T19:22:01.8188921Z   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.8508635Z Collecting limits>=3.13 (from flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:01.8556575Z   Downloading limits-4.2-py3-none-any.whl.metadata (10 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.8822982Z Collecting ordered-set<5,>4 (from flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:01.8864010Z   Downloading ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.9384735Z Collecting rich<14,>=12 (from flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:01.9437066Z   Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.9689275Z Collecting typing_extensions>=4 (from flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:01.9729693Z   Downloading typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:01.9949650Z Collecting markdown-it-py>=2.2.0 (from rich<14,>=12->flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:01.9990183Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.0313419Z Collecting pygments<3.0.0,>=2.13.0 (from rich<14,>=12->flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:02.0352738Z   Downloading pygments-2.19.1-py3-none-any.whl.metadata (2.5 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.0674435Z Collecting prometheus_client (from prometheus_flask_exporter->-r requirements.txt (line 9))
+build-deploy	Install dependencies	2025-06-04T19:22:02.0715992Z   Downloading prometheus_client-0.22.1-py3-none-any.whl.metadata (1.9 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.1029275Z Collecting zipp>=3.20 (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 2))
+build-deploy	Install dependencies	2025-06-04T19:22:02.1072660Z   Downloading zipp-3.22.0-py3-none-any.whl.metadata (3.6 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.1395894Z Collecting deprecated>=1.2 (from limits>=3.13->flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:02.1440654Z   Downloading Deprecated-1.2.18-py2.py3-none-any.whl.metadata (5.7 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.1957770Z Collecting packaging<25,>=21 (from limits>=3.13->flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:02.1996428Z   Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.3323758Z Collecting wrapt<2,>=1.10 (from deprecated>=1.2->limits>=3.13->flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:02.3366760Z   Downloading wrapt-1.17.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.3512647Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14,>=12->flask-limiter->-r requirements.txt (line 8))
+build-deploy	Install dependencies	2025-06-04T19:22:02.3548632Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.3689442Z Downloading flask-3.1.1-py3-none-any.whl (103 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.3772235Z Downloading redis-6.2.0-py3-none-any.whl (278 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.3876795Z Downloading psycopg2_binary-2.9.10-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4052819Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 199.0 MB/s eta 0:00:00
+build-deploy	Install dependencies	2025-06-04T19:22:02.4093601Z Downloading python_dotenv-1.1.0-py3-none-any.whl (20 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4157999Z Downloading flask_cors-6.0.0-py3-none-any.whl (11 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4252216Z Downloading Flask_JWT_Extended-4.7.1-py2.py3-none-any.whl (22 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4322054Z Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4399349Z Downloading flask_limiter-3.11.0-py3-none-any.whl (28 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4470468Z Downloading ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4537568Z Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4611175Z Downloading pygments-2.19.1-py3-none-any.whl (1.2 MB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4709775Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 143.6 MB/s eta 0:00:00
+build-deploy	Install dependencies	2025-06-04T19:22:02.4751105Z Downloading typing_extensions-4.14.0-py3-none-any.whl (43 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4822270Z Downloading prometheus_flask_exporter-0.23.2-py3-none-any.whl (19 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4899594Z Downloading async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.4956619Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5015562Z Downloading click-8.1.8-py3-none-any.whl (98 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5079748Z Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5139975Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5204393Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5283528Z Downloading limits-4.2-py3-none-any.whl (60 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5347400Z Downloading packaging-24.2-py3-none-any.whl (65 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5409684Z Downloading Deprecated-1.2.18-py2.py3-none-any.whl (10.0 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5493786Z Downloading wrapt-1.17.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (82 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5559957Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5625557Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5688392Z Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5749921Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5828412Z Downloading zipp-3.22.0-py3-none-any.whl (9.8 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.5892703Z Downloading prometheus_client-0.22.1-py3-none-any.whl (58 kB)
+build-deploy	Install dependencies	2025-06-04T19:22:02.6934198Z Installing collected packages: zipp, wrapt, typing_extensions, python-dotenv, PyJWT, pygments, psycopg2-binary, prometheus_client, packaging, ordered-set, mdurl, markupsafe, itsdangerous, click, blinker, async-timeout, werkzeug, redis, markdown-it-py, jinja2, importlib-metadata, deprecated, rich, limits, flask, prometheus_flask_exporter, flask-limiter, flask-jwt-extended, flask-cors
+build-deploy	Install dependencies	2025-06-04T19:22:04.6032337Z 
+build-deploy	Install dependencies	2025-06-04T19:22:04.6092936Z Successfully installed PyJWT-2.10.1 async-timeout-5.0.1 blinker-1.9.0 click-8.1.8 deprecated-1.2.18 flask-3.1.1 flask-cors-6.0.0 flask-jwt-extended-4.7.1 flask-limiter-3.11.0 importlib-metadata-8.7.0 itsdangerous-2.2.0 jinja2-3.1.6 limits-4.2 markdown-it-py-3.0.0 markupsafe-3.0.2 mdurl-0.1.2 ordered-set-4.1.0 packaging-24.2 prometheus_client-0.22.1 prometheus_flask_exporter-0.23.2 psycopg2-binary-2.9.10 pygments-2.19.1 python-dotenv-1.1.0 redis-6.2.0 rich-13.9.4 typing_extensions-4.14.0 werkzeug-3.1.3 wrapt-1.17.2 zipp-3.22.0
+build-deploy	Log in to Docker Hub	﻿2025-06-04T19:22:04.7889407Z ##[group]Run echo "" | docker login -u "" --password-stdin
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7889984Z [36;1mecho "" | docker login -u "" --password-stdin[0m
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7942583Z shell: /usr/bin/bash -e {0}
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7942813Z env:
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7943057Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.22/x64
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7943440Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.22/x64/lib/pkgconfig
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7943817Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.22/x64
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7944147Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.22/x64
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7944465Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.22/x64
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7944796Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.22/x64/lib
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.7945065Z ##[endgroup]
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.9303627Z Must provide --username with --password-stdin
+build-deploy	Log in to Docker Hub	2025-06-04T19:22:04.9331142Z ##[error]Process completed with exit code 1.
+build-deploy	Post Checkout source code	﻿2025-06-04T19:22:04.9439924Z Post job cleanup.
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0174711Z [command]/usr/bin/git version
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0212276Z git version 2.49.0
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0255793Z Temporarily overriding HOME='/home/runner/work/_temp/984f7495-edfa-4cae-836e-63b7dc563c6f' before making global git config changes
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0257206Z Adding repository directory to the temporary git global config as a safe directory
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0260240Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-startup-namer/project-startup-namer
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0294366Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0324979Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0558442Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0579988Z http.https://github.com/.extraheader
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0591670Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build-deploy	Post Checkout source code	2025-06-04T19:22:05.0621807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-deploy	Complete job	﻿2025-06-04T19:22:05.0965402Z Cleaning up orphan processes
